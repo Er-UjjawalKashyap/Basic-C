@@ -1,17 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int n,m;
-    printf("Enter the numbers of Row(lines)\n");
-    scanf("%d",&m);
-    if(m%2==0) m/=2;
-    n=(m+1)/2;
-    for(int k=0;k<m;k++)
+    int z=1;
+    while(z==1)
     {
-        for (int i=n;i>=0;i--) printf(" ");
-        for(int j=0;j<=k;j++) printf("*");
+        int n,m;
+        printf("Enter the numbers of Row(lines)\n");
+        scanf("%d",&m);
+        n=m;
+        for(int k=0;k<m;k++)
+        { 
+        for (int i=n;i>0;i--) printf(" ");
+        for(int j=0,p=(2*k)+1;j<p;j++) printf("*");
         printf("\n");
         n--;
+        }
+    printf("For restart program press 1\n For stop program press 0\n");
+    scanf("%d",&z);
     }
     return(0);
 }
